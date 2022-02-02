@@ -1,0 +1,30 @@
+.loader-linear {
+    height: 3px;
+    margin-bottom: -3px;
+    background-color: #cef0ff;
+    overflow: hidden;
+    visibility: hidden;
+}
+.loader-linear.show {
+    visibility: visible;
+}
+
+.loader-linear:before {
+    content: '';
+    display: block;
+    position: relative;
+    height: 3px;
+    background-color: #03a9f4;
+    animation: loader-frames 1.5s infinite ease-in-out;
+}
+
+@keyframes loader-frames {
+    0% {
+        left: -10%;
+        width: 10%;
+    }
+    100% {
+        left: 100%;
+        width: 100%;
+    }
+}
